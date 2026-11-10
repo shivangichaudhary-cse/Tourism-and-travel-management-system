@@ -49,7 +49,7 @@ The core system reads and persists real-time transactional records across four r
 
 TTMS utilizes a modular tier architecture balancing robust Object-Oriented principles with custom Data Structures & Algorithms (DSA):
 
-''' text
+'''text
 Tour Travel Management System
  ┣ 📂 Data Layer
  ┃ ┗ DatabaseManager (Pandas Read/Write Engine & ID Generator)
