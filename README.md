@@ -92,10 +92,10 @@ python main.py
 
 ## 🔮 Future Upgrade
 
-- [ ] **SQL Relational Database Integration:** Upgrade CSV file backends to PostgreSQL or SQLite for ACID-compliant transactions.
-- [ ] **Graphical User Interface (GUI):** Transition terminal prompts into a modern PySide6 or PyQt desktop dashboard.
-- [ ] **Automated PDF Invoicing:** Auto-generate downloadable customer booking receipts and financial summaries.
-- [ ] **Role-Based Access Control (RBAC):** Separate Admin privileges (adding/removing tours) from standard customer access.
+- **SQL Relational Database Integration:** Upgrade CSV file backends to PostgreSQL or SQLite for ACID-compliant transactions.
+- **Graphical User Interface (GUI):** Transition terminal prompts into a modern PySide6 or PyQt desktop dashboard.
+- **Automated PDF Invoicing:** Auto-generate downloadable customer booking receipts and financial summaries.
+- **Role-Based Access Control (RBAC):** Separate Admin privileges (adding/removing tours) from standard customer access.
 
 ---
 
