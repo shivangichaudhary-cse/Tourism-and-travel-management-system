@@ -1,6 +1,6 @@
 # Tourism-and-travel-management-system
 This project optimizes tour and travel management by providing actionable insights for admins, planners, and customers. Using structured data and analytics, the system tracks schedules, customer interactions, and booking patterns. It identifies popularity trends to enable data-driven decisions and deliver seamless travel experiences. 
-# ✈️ Tour & Travel Management System
+## ✈️ Tour & Travel Management System
 
 An enterprise-grade, interactive CLI travel suite engineered with Python, Object-Oriented Architecture, Custom Data Structures, Pandas DataFrames, and Matplotlib Visual Analytics.
 
