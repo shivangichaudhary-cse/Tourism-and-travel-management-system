@@ -49,7 +49,7 @@ The core system reads and persists real-time transactional records across four r
 
 TTMS utilizes a modular tier architecture balancing robust Object-Oriented principles with custom Data Structures & Algorithms (DSA):
 
-
+''' text
 Tour Travel Management System
  ┣ 📂 Data Layer
  ┃ ┗ DatabaseManager (Pandas Read/Write Engine & ID Generator)
@@ -62,6 +62,8 @@ Tour Travel Management System
  ┃ ┗ CustomerOperations (Concrete Controller for profiles & booking histograms)
  ┗ 📂 Runtime
    ┗ AppEngine (Central runtime dispatcher)
+   '''
+   
 > [!IMPORTANT]
 > Typing `back` at any prompt safely triggers the custom `NavigationBackException`, unwinding the LIFO session stack without corrupting data or throwing tracebacks.
 
