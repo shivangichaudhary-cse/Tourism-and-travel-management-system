@@ -1,0 +1,12 @@
+Tour_ID,Tour_Name,Tour_Destination,Tour_Price,Start_Date,End_Date
+T1,Beijing Cultural Tour,Beijing,800,2025-03-01,2025-03-07
+T2,Shanghai Skyline Experience,Shanghai,650,2025-04-10,2025-04-15
+T3,Great Wall Adventure,Beijing,900,2025-05-05,2025-05-12
+T4,Chengdu Panda Visit,Chengdu,700,2025-06-01,2025-06-06
+T5,Guilin River Cruise,Guilin,750,2025-07-10,2025-07-17
+T6,Hangzhou West Lake Tour,Hangzhou,720,2025-08-15,2025-08-20
+T7,Xi'an Terra Cotta Warriors,Xi'an,880,2025-09-05,2025-09-12
+T8,Harbin Ice Festival,Harbin,680,2025-12-01,2025-12-07
+T9,Hong Kong City Tour,Hong Kong,600,2025-11-10,2025-11-15
+T10,Macau Food and Culture,Macau,620,2025-11-20,2025-11-26
+T11,Yangtze River Cruise,Chongqing,850,2025-10-01,2025-10-10

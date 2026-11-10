@@ -1,0 +1,12 @@
+Customer_ID,Customer_Name,Customer_Address,Customer_Phone,Customer_Email
+C1,Zhang Wei,No.12 Chang’an St,13800010001,zhangwei@example.com
+C2,Wang Fang,No.34 Nanjing Rd,13800010002,wangfang@example.com
+C3,Liu Yang,No.56 Shanghai Rd,13800010003,liuyang@example.com
+C4,Chen Hui,No.78 Beijing Rd,13800010004,chenhui@example.com
+C5,Li Na,No.90 Guangzhou St,13800010005,li_na@example.com
+C6,Zhao Jun,No.22 Hangzhou Rd,13800010006,zhaojun@example.com
+C7,Sun Ming,No.45 Wuhan Rd,13800010007,sunming@example.com
+C8,Huang Lei,No.67 Chengdu Rd,13800010008,huanglei@example.com
+C9,Zhou Lei,No.89 Xi’an Rd,13800010009,zhoulei@example.com
+C10,Ma Rong,No.11 Harbin Rd,13800010010,marong@example.com
+C11,Guo Ping,No.33 Macau Rd,13800010011,guopingonmacaurd@example.com
