@@ -76,18 +76,18 @@ Tour Travel Management System
 
 ### Software & Python Dependencies
 
-# Python Runtime
+### Python Runtime
 Python 3.8 or higher
 
-# Required Libraries
+### Required Libraries
 pandas >= 1.3.0
 numpy >= 1.21.0
 matplotlib >= 3.4.0
 
-# Install dependencies
+### Install dependencies
 pip install pandas numpy matplotlib
 
-# Run application
+### Run application
 python main.py
 
 ## 🔮 Future Upgrade
