@@ -75,7 +75,7 @@ Tour Travel Management System
 - **Disk Space:** 50 MB Free Space
 
 ### Software & Python Dependencies
-```bash
+
 # Python Runtime
 Python 3.8 or higher
 
