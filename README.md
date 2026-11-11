@@ -95,6 +95,12 @@ matplotlib >= 3.4.0
 - **Graphical User Interface (GUI):** Transition terminal prompts into a modern PySide6 or PyQt desktop dashboard.
 - **Automated PDF Invoicing:** Auto-generate downloadable customer booking receipts and financial summaries.
 - **Role-Based Access Control (RBAC):** Separate Admin privileges (adding/removing tours) from standard customer access.
+<p align="center">
+  <a href="https://github.com/shivangichaudhary-cse/Tourism-and-travel-management-system/blob/main/Future%20updates.md">
+    <img src="https://img.shields.io/badge/View_Future_Updates-Roadmap-blueviolet?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</p>
+
 
 ---
 
