@@ -1,4 +1,4 @@
-✈️ Tour & Travel Management System
+### ✈️ Tour & Travel Management System
 
 A Python-based command-line application designed to manage tour information, customer records, and booking data through a structured and interactive travel management system.
 
@@ -12,7 +12,7 @@ The project explores the practical application of Object-Oriented Programming, c
   <img src="https://img.shields.io/badge/Architecture-OOP%20%2B%20DSA-ff69b4?style=for-the-badge" />
 </p>---
 
-📌 Project Introduction
+## 📌 Project Introduction
 
 The Tour & Travel Management System (TTMS) is an interactive terminal-based application developed in Python to organize and manage essential travel agency operations.
 
@@ -25,7 +25,7 @@ The application is designed for lightweight execution in local Python environmen
 
 ---
 
-🎯 Project Goals
+## 🎯 Project Goals
 
 - Organized Travel Management: Provide structured operations for managing tours, customers, bookings, and related information.
 - Interactive Navigation: Implement a menu-driven interface with custom navigation and input validation.
@@ -36,39 +36,39 @@ The application is designed for lightweight execution in local Python environmen
 
 ---
 
-🚀 Features
+## 🚀 Features
 
-1. Tour Management
+### 1. Tour Management
 
 - Access and manage tour-related information.
 - Work with tour records containing destinations, pricing, and scheduling details.
 - Support tour-related data operations.
 
-2. Customer Management
+### 2. Customer Management
 
 - Store and manage customer profiles.
 - Maintain structured customer information.
 - Access customer-related records and booking information.
 
-3. Booking Management
+### 3. Booking Management
 
 - Handle booking-related records.
 - Maintain associations between customers and tour packages.
 - Work with structured reservation data.
 
-4. Interactive Navigation
+### 4. Interactive Navigation
 
 - Navigate through different application modules using a menu-driven interface.
 - Implement custom navigation handling.
 - Support returning to previous menu states through a dedicated navigation mechanism.
 
-5. Data Handling
+### 5. Data Handling
 
 - Read and write structured CSV datasets.
 - Use Pandas for data manipulation and record management.
 - Maintain separate datasets for different application entities.
 
-6. Data Visualization
+### 6. Data Visualization
 
 - Integrate Matplotlib for graphical data representation.
 - Explore tour popularity and customer-related data patterns.
@@ -76,7 +76,7 @@ The application is designed for lightweight execution in local Python environmen
 
 ---
 
-🛠️ Technologies Used
+## 🛠️ Technologies Used
 
 Technology| Purpose
 Python| Core programming language and application logic
@@ -88,7 +88,7 @@ CSV| Structured file-based data storage
 
 ---
 
-📊 Data Collection
+## 📊 Data Collection
 
 The system uses four structured CSV files to store and manage application data.
 
@@ -102,7 +102,7 @@ These datasets allow the application to organize different categories of informa
 
 ---
 
-🧠 Methodology & System Architecture
+## 🧠 Methodology & System Architecture
 
 TTMS follows a modular architecture that separates data management, navigation, application control, and runtime execution.
 
@@ -141,29 +141,29 @@ Tour & Travel Management System
     └── AppEngine
         └── Central Application Dispatcher
 
-Core Architectural Components
+## Core Architectural Components
 
-1. DatabaseManager — Data Layer
+### 1. DatabaseManager — Data Layer
 
 Responsible for handling structured data operations through Pandas, including reading and writing CSV files and supporting record-related functionality.
 
-2. SessionHistory — Navigation Layer
+### 2. SessionHistory — Navigation Layer
 
 Implements a custom stack-based navigation mechanism using the LIFO (Last-In, First-Out) principle to maintain application menu history.
 
-3. PromptValidator — Input Validation
+### 3. PromptValidator — Input Validation
 
 Handles user input validation and supports custom navigation control through exception handling.
 
-4. MenuController — Control Layer
+### 4. MenuController — Control Layer
 
 Acts as a base controller for organizing application operations and supporting dynamic method dispatch.
 
-5. TourOperations & CustomerOperations — Functional Modules
+### 5. TourOperations & CustomerOperations — Functional Modules
 
 Provide dedicated controllers for tour-related and customer-related management operations, with associated data-handling and visualization functionality.
 
-6. AppEngine — Runtime Layer
+### 6. AppEngine — Runtime Layer
 
 Coordinates application execution and dispatches control between the different application components.
 
@@ -172,7 +172,7 @@ The application supports typing "back" at input prompts to initiate custom navig
 
 ---
 
-📂 Repository Structure
+## 📂 Repository Structure
 
 Tourism-and-travel-management-system/
 │
@@ -189,16 +189,16 @@ Tourism-and-travel-management-system/
 
 ---
 
-⚙️ System Requirements
+## ⚙️ System Requirements
 
-Hardware & Environment
+### Hardware & Environment
 
 - Operating System: Windows, macOS, or Linux
 - RAM: 2 GB minimum recommended
 - Storage: Sufficient space for Python, dependencies, and project files
 - Execution Environment: Local Python environment or Google Colab
 
-Software Requirements
+### Software Requirements
 
 - Python: Python 3.8 or higher
 - Required Libraries:
@@ -206,38 +206,37 @@ Software Requirements
   - NumPy
   - Matplotlib
 
-Install Dependencies
+### Install Dependencies
 
-Install the required Python libraries using pip:
-
-pip install pandas numpy matplotlib
+- Install the required Python libraries using pip:
+- pip install pandas numpy matplotlib
 
 ---
 
-▶️ Installation & Execution
+## ▶️ Installation & Execution
 
 Follow these steps to run the application:
 
-1. Clone or Download the Repository
+### 1. Clone or Download the Repository
 
 Download the repository to your local device or clone it using Git:
 
 git clone https://github.com/shivangichaudhary-cse/Tourism-and-travel-management-system.git
 
-2. Install Dependencies
+### 2. Install Dependencies
 
 Make sure Python and the required libraries are installed:
 
 pip install pandas numpy matplotlib
 
-3. Configure CSV File Paths
+### 3. Configure CSV File Paths
 
 Update the CSV file paths in "main_source_code.py" according to the location where the project files are stored on your device.
 
 «[!NOTE]
 The file paths currently used in the source code (such as "/content/") are sample paths from the Google Colab environment. If you are running the application in a different environment, replace these paths with the actual locations of the corresponding CSV files on your device.»
 
-4. Run the Application
+### 4. Run the Application
 
 Navigate to the project directory and execute:
 
@@ -245,7 +244,7 @@ python main_source_code.py
 
 ---
 
-📚 Concepts Demonstrated
+## 📚 Concepts Demonstrated
 
 This project demonstrates the practical application of several fundamental programming and Computer Science concepts.
 
@@ -264,28 +263,28 @@ Modular Programming| Separating application responsibilities into logical compon
 
 ---
 
-🔮 Future Scope & Enhancements
+## 🔮 Future Scope & Enhancements
 
 The project can be extended through several improvements to enhance its functionality, usability, and data management capabilities.
 
-1. SQL Relational Database Integration
+### 1. SQL Relational Database Integration
 
 - Replace CSV-based storage with a relational database such as SQLite or PostgreSQL.
 - Introduce structured database relationships and query-based operations.
 - Improve transaction management and data consistency.
 
-2. Graphical User Interface (GUI)
+### 2. Graphical User Interface (GUI)
 
 - Transition from terminal-based navigation to a graphical desktop application.
 - Explore frameworks such as PySide6 or PyQt.
 - Develop interactive dashboards for tour and customer management.
 
-3. Automated PDF Invoicing
+### 3. Automated PDF Invoicing
 
 - Generate booking receipts and customer invoices automatically.
 - Create downloadable financial summaries and transaction reports.
 
-4. Role-Based Access Control (RBAC)
+### 4. Role-Based Access Control (RBAC)
 
 - Introduce separate access levels for administrators and customers.
 - Restrict administrative operations such as adding, modifying, or removing tour records.
@@ -297,7 +296,7 @@ The project can be extended through several improvements to enhance its function
 
 ---
 
-🔭 Project Scope & Limitations
+## 🔭 Project Scope & Limitations
 
 Primary Scope
 
@@ -321,7 +320,7 @@ These areas may be considered for future development.
 
 ---
 
-💡 Conclusion
+## 💡 Conclusion
 
 The Tour & Travel Management System demonstrates how fundamental Computer Science concepts can be applied to develop a structured and interactive management application.
 
@@ -333,7 +332,7 @@ The project serves as a practical exploration of Python programming, software ar
 
 ---
 
-📜 License
+## 📜 License
 
 This project is licensed under the MIT License.
 
