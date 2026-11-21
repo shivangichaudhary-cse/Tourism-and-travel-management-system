@@ -1,6 +1,6 @@
 ### ✈️ Tour & Travel Management System
 
-A Python command-line application for managing tours, customer records, bookings, and guide information. It combines object-oriented design, CSV-based data handling, stack-based navigation, and data visualization.
+A Python command-line application for managing tours, customer records, bookings, and guide information. It combines object-oriented design, CSV-based data handling, stack-based navigation, and data visualization to demonstrate a complete desktop-style data-management workflow.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" />
@@ -11,24 +11,33 @@ A Python command-line application for managing tours, customer records, bookings
 
 ---
 
+## 🎯 Project Overview / Objective
+
+Managing tour packages, customer profiles, and reservations through disconnected records can make it difficult to keep information consistent and to identify booking trends. This project provides a single Python command-line system that organizes those records and gives the user basic tools to add, update, review, and remove data.
+
+The project's objective is to demonstrate how core software-development concepts can be combined in a practical management application: modular object-oriented design, CSV-backed persistent storage, validated interactive input, menu history, and exploratory data visualization. It also provides a focused learning environment for understanding how identifiers and separate datasets are related—for example, how a `Customer_ID` and `Tour_ID` in `BOOKING.csv` connect customer and tour records.
+
+---
+
 ## ✨ Features
 
 The application is organized around the main tasks of a travel-management workflow:
 
 | Feature | What it provides |
 | --- | --- |
-|  **Tour management** | Access and manage tour records, including destinations, prices, and schedules. |
-|  **Customer management** | Maintain customer profiles and access customer-related records. |
-|  **Booking management** | Work with reservation records and the associations between customers and tour packages. |
-|  **Menu navigation** | Move between application modules and return to previous menus using a custom history mechanism. |
-|  **CSV data management** | Read and write structured datasets with Pandas, keeping each type of record in its own file. |
-|  **Visualizations** | Use Matplotlib to explore tour popularity and customer-related data patterns. |
+| **Tour management** | Access and manage tour records, including destinations, prices, and schedules. |
+| **Customer management** | Maintain customer profiles and access customer-related records. |
+| **Booking management** | Work with reservation records and the associations between customers and tour packages. |
+| **Guide records** | Load and retain guide information and its tour assignments. |
+| **Menu navigation** | Move between application modules and return to previous menus using a custom history mechanism. |
+| **CSV data management** | Read and write structured datasets with Pandas, keeping each type of record in its own file. |
+| **Visualizations** | Use Matplotlib to explore tour demand and customer booking patterns. |
 
 ---
 
 ## 🏗️ Core Architecture
 
-The system separates data access, navigation, input handling, business operations, and application startup. The diagram shows how those responsibilities fit together.
+The application separates runtime control, menu dispatch, operation classes, validation, navigation, and data access.
 
 ```mermaid
 flowchart TD
@@ -39,8 +48,9 @@ flowchart TD
 
     Tour --> Data[DatabaseManager<br/>Pandas and CSV data access]
     Customer --> Data
-    Tour --> Charts[Matplotlib visualizations]
-    Customer --> Charts
+
+    Tour --> TourViz[Matplotlib calls<br/>Tour and booking charts]
+    Customer --> CustomerViz[Matplotlib calls<br/>Customer booking charts]
 
     Menu --> Validator[PromptValidator<br/>Input validation]
     Validator --> Back[NavigationBackException<br/>Handle back requests]
@@ -51,13 +61,15 @@ flowchart TD
 
 | Component | Layer | Responsibility |
 | --- | --- | --- |
-| `AppEngine` | Runtime | Starts the application and dispatches control to the appropriate components. |
-| `MenuController` | Control | Provides the base controller and routes menu selections to operations. |
-| `TourOperations` | Functional module | Handles tour-related operations and tour visualizations. |
-| `CustomerOperations` | Functional module | Handles customer and booking-related operations and visualizations. |
-| `DatabaseManager` | Data | Reads and writes CSV data with Pandas and supports record-related operations. |
-| `PromptValidator` | Input | Validates user input and supports navigation control through exception handling. |
-| `SessionHistory` | Navigation | Maintains menu history with a last-in, first-out (LIFO) stack. |
+| `AppEngine` | Runtime | Creates the controller modules, starts the main menu, and tracks module history. |
+| `MenuController` | Control | Provides the common menu loop, dynamic dispatch map, choice handling, and back-navigation exception handling. |
+| `TourOperations` | Functional module | Manages tour CRUD actions, popularity, availability, budgeting, and tour-related charts. |
+| `CustomerOperations` | Functional module | Manages customer CRUD actions and displays a customer's booking history as a chart. |
+| `DatabaseManager` | Data | Loads all four CSV files into indexed Pandas DataFrames and saves modified DataFrames. |
+| `PromptValidator` | Input | Validates command-line input and recognizes `back` as a navigation request. |
+| `SessionHistory` | Navigation | Maintains module history with a last-in, first-out (LIFO) stack. |
+
+Both functional modules extend `MenuController`, use `PromptValidator` for interactive input, and access the shared `db` instance. They also generate charts directly with Matplotlib rather than using a separate chart service: `TourOperations` draws tour-popularity, availability, and budget charts, while `CustomerOperations` draws a booking-history chart for a selected customer. This direct, module-level visualization flow is consistent in both classes even though their chart data differs.
 
 > **Navigation tip:** Type `back` at a prompt to trigger `NavigationBackException` and return to the previous menu state.
 
@@ -76,16 +88,20 @@ flowchart TD
 
 ---
 
-## 📊 Data files
+## 📊 Data Handling
 
-The application uses four CSV files to keep its records organized:
+`DatabaseManager` loads `TOUR.csv`, `CUSTOMERS.csv`, `BOOKING.csv`, and `GUIDE.csv` once when the application starts. Pandas reads each file into a DataFrame and uses its ID column as the index, such as `Tour_ID` or `Customer_ID`; missing values are replaced with empty strings.
 
-| File | Primary key | Contents |
+The datasets are linked through shared identifiers:
+
+| File | Primary key | Contents and role |
 | --- | --- | --- |
-| `TOUR.csv` | `Tour_ID` | Tour names, destinations, pricing, and schedules |
-| `CUSTOMERS.csv` | `Customer_ID` | Customer profiles and contact information |
-| `BOOKING.csv` | `Booking_ID` | Booking records and customer-to-tour associations |
-| `GUIDE.csv` | `Guide_ID` | Tour guide information and assignment details |
+| `TOUR.csv` | `Tour_ID` | Tour names, destinations, prices, and start/end dates; used for tour operations and charts. |
+| `CUSTOMERS.csv` | `Customer_ID` | Customer names and contact details; used for customer profiles. |
+| `BOOKING.csv` | `Booking_ID` | Booking dates plus `Customer_ID` and `Tour_ID`; connects customers to tour packages and supports popularity analysis. |
+| `GUIDE.csv` | `Guide_ID` | Guide names, contact information, and assigned `Tour_ID` values. |
+
+The application creates or updates DataFrames in memory, then writes them back to CSV files through `DatabaseManager.save()`. The current source uses `/content/` only for initial reads and writes some modified files to names such as `Tours.csv` and `Customers.csv`; when running locally, these paths and filenames should be verified and kept consistent with the repository CSV files.
 
 ---
 
@@ -172,7 +188,15 @@ See [Future updates](Future%20updates.md) for additional development notes.
 
 ## 🔭 Scope and limitations
 
-This project is a local, terminal-based management application. It does not currently include public online booking, payment processing, live flight or hotel API integrations, cloud-hosted database services, or multi-user authentication. These could be considered for future development.
+This project is a local, terminal-based management application. It does not currently include public online booking, payment processing, live flight or hotel API integrations, cloud-hosted database storage, or concurrent multi-user support. The CSV files provide simple persistence but may require extra safeguards and relational database features as the dataset grows.
+
+---
+
+## ✅ Conclusion
+
+The Tour & Travel Management System brings several Python programming concepts together in a small, understandable application. It demonstrates how object-oriented controllers can organize an interactive workflow, how a shared data layer can maintain CSV-backed records, and how menu navigation can be controlled with exceptions and a stack. Matplotlib charts extend the system beyond record maintenance by turning booking and tour data into visual summaries.
+
+The project also illustrates a key transition between learning projects and larger systems: simple CSV files are easy to inspect and maintain for a prototype, while future growth would benefit from a relational database, stronger validation, and a graphical or web interface.
 
 ---
 
