@@ -17,12 +17,12 @@ The application is organized around the main tasks of a travel-management workfl
 
 | Feature | What it provides |
 | --- | --- |
-| 🧭 **Tour management** | Access and manage tour records, including destinations, prices, and schedules. |
-| 👥 **Customer management** | Maintain customer profiles and access customer-related records. |
-| 🎟️ **Booking management** | Work with reservation records and the associations between customers and tour packages. |
-| 🗂️ **Menu navigation** | Move between application modules and return to previous menus using a custom history mechanism. |
-| 📄 **CSV data management** | Read and write structured datasets with Pandas, keeping each type of record in its own file. |
-| 📊 **Visualizations** | Use Matplotlib to explore tour popularity and customer-related data patterns. |
+|  **Tour management** | Access and manage tour records, including destinations, prices, and schedules. |
+|  **Customer management** | Maintain customer profiles and access customer-related records. |
+|  **Booking management** | Work with reservation records and the associations between customers and tour packages. |
+|  **Menu navigation** | Move between application modules and return to previous menus using a custom history mechanism. |
+|  **CSV data management** | Read and write structured datasets with Pandas, keeping each type of record in its own file. |
+|  **Visualizations** | Use Matplotlib to explore tour popularity and customer-related data patterns. |
 
 ---
 
