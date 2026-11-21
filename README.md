@@ -3,12 +3,11 @@
 A Python command-line application for managing tours, customer records, bookings, and guide information. It combines object-oriented design, CSV-based data handling, stack-based navigation, and data visualization to demonstrate a complete desktop-style data-management workflow.
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B" />
   <img src="https://img.shields.io/badge/Pandas-Data%20Handling-150458?style=for-the-badge&logo=pandas&logoColor=white" />
-  <img src="https://img.shields.io/badge/NumPy-Numerical%20Operations-013243?style=for-the-badge&logo=numpy&logoColor=white" />
-  <img src="https://img.shields.io/badge/Matplotlib-Data%20Visualization-11557C?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/NumPy-Numerical%20Operations-013243?style=for-the-badge&logo=numpy&logoColor=4DABCF" />
+  <img src="https://img.shields.io/badge/Matplotlib-Data%20Visualization-11557C?style=for-the-badge&logo=matplotlib&logoColor=white" />
 </p>
-
 ---
 
 ## 🎯 Project Overview / Objective
