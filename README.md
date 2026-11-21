@@ -1,118 +1,340 @@
-# Tourism-and-travel-management-system
-This project optimizes tour and travel management by providing actionable insights for admins, planners, and customers. Using structured data and analytics, the system tracks schedules, customer interactions, and booking patterns. It identifies popularity trends to enable data-driven decisions and deliver seamless travel experiences. 
-## ✈️ Tour & Travel Management System
+✈️ Tour & Travel Management System
 
-An enterprise-grade, interactive CLI travel suite engineered with Python, Object-Oriented Architecture, Custom Data Structures, Pandas DataFrames, and Matplotlib Visual Analytics.
+A Python-based command-line application designed to manage tour information, customer records, and booking data through a structured and interactive travel management system.
+
+The project explores the practical application of Object-Oriented Programming, custom data structures, structured data handling, and data visualization. It combines modular software design with analytical capabilities to demonstrate how fundamental Computer Science concepts can support travel agency operations.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Pandas-Data%20Engine-150458?style=for-the-badge&logo=pandas&logoColor=white" />
-  <img src="https://img.shields.io/badge/Matplotlib-Data%20Viz-11557c?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Pandas-Data%20Handling-150458?style=for-the-badge&logo=pandas&logoColor=white" />
+  <img src="https://img.shields.io/badge/NumPy-Numerical%20Operations-013243?style=for-the-badge&logo=numpy&logoColor=white" />
+  <img src="https://img.shields.io/badge/Matplotlib-Data%20Visualization-11557C?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Architecture-OOP%20%2B%20DSA-ff69b4?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Release-v1.0.0--stable-brightgreen?style=for-the-badge" />
-</p>
+</p>---
+
+📌 Project Introduction
+
+The Tour & Travel Management System (TTMS) is an interactive terminal-based application developed in Python to organize and manage essential travel agency operations.
+
+The system works with structured CSV datasets to maintain tour information, customer profiles, booking records, and tour guide details. Through a menu-driven interface, users can navigate different management operations, interact with stored records, and access data-related functionality.
+
+By integrating Object-Oriented Programming principles, custom stack-based navigation, Pandas DataFrames, and Matplotlib visualizations, the project demonstrates how core programming concepts can be combined to build a modular and maintainable management application.
+
+«[!NOTE]
+The application is designed for lightweight execution in local Python environments and cloud notebook platforms such as Google Colab.»
 
 ---
 
-## 📌 Project Introduction
+🎯 Project Goals
 
-The **Tour & Travel Management System (TTMS)** is a high-performance terminal application designed to streamline travel agency operations. By integrating relational CSV datasets with clean object-oriented software patterns and custom stack data structures, TTMS provides agency staff with real-time tour booking, customer profile tracking, and automated analytical reporting without full web-stack overhead.
-
-> [!NOTE]
-> Designed for lightweight execution, TTMS runs efficiently in local command lines or cloud notebook environments like Google Colab.
-
----
-
-## 🎯 Project Goal
-
-- **Automate Core Workflows:** Modernize tour schedule creation, price updating, and customer record management.
-- **Fail-Safe CLI Navigation:** Eliminate runtime crashes from bad user inputs using custom flow-control exception handling.
-- **Visual Analytics Engine:** Enable data-driven business decisions by automatically plotting popularity trends and budget distribution curves.
-- **Maintainable Architecture:** Modularize code using OOP inheritance and dynamic controller routing maps for frictionless future expansion.
+- Organized Travel Management: Provide structured operations for managing tours, customers, bookings, and related information.
+- Interactive Navigation: Implement a menu-driven interface with custom navigation and input validation.
+- Structured Data Handling: Maintain application records through CSV files and Pandas-based data operations.
+- Data Visualization: Explore travel-related data through graphical representations and analytical insights.
+- Modular Architecture: Apply OOP principles, inheritance, and dynamic method dispatch to organize application functionality.
+- Practical DSA Implementation: Demonstrate stack-based navigation using the Last-In, First-Out (LIFO) principle.
 
 ---
 
-## 📊 Data Collection
+🚀 Features
 
-The core system reads and persists real-time transactional records across four relational CSV files:
+1. Tour Management
 
-| File Name | Primary Key | Description & Core Attributes |
-| :--- | :---: | :--- |
-| `TOUR.csv` | `Tour_ID` | Master catalog storing tour names, destinations, price segments, and dates. |
-| `CUSTOMERS.csv` | `Customer_ID` | Customer database tracking profiles, phone records, address, and email details. |
-| `BOOKING.csv` | `Booking_ID` | Mapping table storing active customer reservations linked to tour packages. |
-| `GUIDE.csv` | `Guide_ID` | Staff assignment logs detailing active tour guides and operational scheduling. |
+- Access and manage tour-related information.
+- Work with tour records containing destinations, pricing, and scheduling details.
+- Support tour-related data operations.
 
----
+2. Customer Management
 
-## 🧠 Methodology
+- Store and manage customer profiles.
+- Maintain structured customer information.
+- Access customer-related records and booking information.
 
-TTMS utilizes a modular tier architecture balancing robust Object-Oriented principles with custom Data Structures & Algorithms (DSA):
+3. Booking Management
 
-<pre>
-Tour Travel Management System
- ┣ 📂 Data Layer
- ┃ ┗ DatabaseManager (Pandas Read/Write Engine & ID Generator)
- ┣ 📂 DSA Navigation Stack
- ┃ ┗ SessionHistory (LIFO Stack tracking menu state frames)
- ┣ 📂 Control Tier
- ┃ ┣ PromptValidator (Input verification & NavigationBackException trigger)
- ┃ ┣ MenuController (Base Class with dynamic dispatch mapping)
- ┃ ┣ TourOperations (Concrete Controller for tours & Matplotlib analytics)
- ┃ ┗ CustomerOperations (Concrete Controller for profiles & booking histograms)
- ┗ 📂 Runtime
-   ┗ AppEngine (Central runtime dispatcher)
-</pre>
-   
-> [!IMPORTANT]
-> Typing `back` at any prompt safely triggers the custom `NavigationBackException`, unwinding the LIFO session stack without corrupting data or throwing tracebacks.
+- Handle booking-related records.
+- Maintain associations between customers and tour packages.
+- Work with structured reservation data.
 
----
+4. Interactive Navigation
 
-## 💻 System Requirements
+- Navigate through different application modules using a menu-driven interface.
+- Implement custom navigation handling.
+- Support returning to previous menu states through a dedicated navigation mechanism.
 
-### Hardware & Environment
-- **OS:** Windows 10/11, macOS 11+, or Linux (Ubuntu 20.04+)
-- **RAM:** 2 GB Minimum (4 GB Recommended)
-- **Disk Space:** 50 MB Free Space
+5. Data Handling
 
-### Software & Python Dependencies
+- Read and write structured CSV datasets.
+- Use Pandas for data manipulation and record management.
+- Maintain separate datasets for different application entities.
 
-- **Python Runtime:** Python 3.8 or higher
+6. Data Visualization
 
-- **Required Libraries:**
-pandas >= 1.3.0
-numpy >= 1.21.0
-matplotlib >= 3.4.0
-
-- **Install dependencies:** pip install pandas numpy matplotlib
-
-- **Run application:** python main.py
-
-## 🔮 Future Upgrade
-
-- **SQL Relational Database Integration:** Upgrade CSV file backends to PostgreSQL or SQLite for ACID-compliant transactions.
-- **Graphical User Interface (GUI):** Transition terminal prompts into a modern PySide6 or PyQt desktop dashboard.
-- **Automated PDF Invoicing:** Auto-generate downloadable customer booking receipts and financial summaries.
-- **Role-Based Access Control (RBAC):** Separate Admin privileges (adding/removing tours) from standard customer access.
-<p align="center">
-  <a href="https://github.com/shivangichaudhary-cse/Tourism-and-travel-management-system/blob/main/Future%20updates.md">
-    <img src="https://img.shields.io/badge/View_Future_Updates-Roadmap-blueviolet?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-</p>
-
+- Integrate Matplotlib for graphical data representation.
+- Explore tour popularity and customer-related data patterns.
+- Support analytical interpretation through visual outputs.
 
 ---
 
-## 🔭 Scope
+🛠️ Technologies Used
 
-- **Primary Scope:** Internal desktop application for small-to-medium travel agencies and desk agents requiring quick catalog updates and booking metrics.
-- **Out of Scope:** Online public web booking portals, payment gateway integrations (Stripe/PayPal), or live third-party flight API synchronizations.
+Technology| Purpose
+Python| Core programming language and application logic
+Object-Oriented Programming| Modular architecture, inheritance, and method organization
+Pandas| DataFrame operations and CSV data management
+NumPy| Numerical operations
+Matplotlib| Data visualization and graphical analysis
+CSV| Structured file-based data storage
 
 ---
 
-## 💡 Conclusion
+📊 Data Collection
 
-The **Tour & Travel Management System** demonstrates how fundamental Computer Science concepts—such as Object-Oriented Design, custom exception stack management, and DataFrame manipulations—can transform a command-line interface into an enterprise tool. By coupling structured data validation with immediate visual reporting, TTMS provides an all-in-one software solution that is both maintainable for developers and seamless for operators.
+The system uses four structured CSV files to store and manage application data.
 
+File Name| Primary Key| Description
+"TOUR.csv"| "Tour_ID"| Stores tour information, including tour names, destinations, pricing, and schedules.
+"CUSTOMERS.csv"| "Customer_ID"| Maintains customer profiles, including contact details, addresses, and email information.
+"BOOKING.csv"| "Booking_ID"| Stores booking records and associations between customers and tour packages.
+"GUIDE.csv"| "Guide_ID"| Maintains tour guide information and related assignment details.
 
+These datasets allow the application to organize different categories of information separately while supporting data access and manipulation through Pandas.
+
+---
+
+🧠 Methodology & System Architecture
+
+TTMS follows a modular architecture that separates data management, navigation, application control, and runtime execution.
+
+Architectural Overview
+
+Tour & Travel Management System
+│
+├── Data Layer
+│   └── DatabaseManager
+│       └── Pandas CSV Read/Write Operations
+│       └── ID Generation
+│
+├── DSA Navigation Layer
+│   └── SessionHistory
+│       └── LIFO Stack-based Navigation
+│
+├── Control Layer
+│   ├── PromptValidator
+│   │   └── Input Validation
+│   │   └── NavigationBackException
+│   │
+│   ├── MenuController
+│   │   └── Base Controller
+│   │   └── Dynamic Method Dispatch
+│   │
+│   ├── TourOperations
+│   │   └── Tour Management
+│   │   └── Matplotlib Visualization
+│   │
+│   └── CustomerOperations
+│       └── Customer Management
+│       └── Booking-related Operations
+│       └── Data Visualization
+│
+└── Runtime Layer
+    └── AppEngine
+        └── Central Application Dispatcher
+
+Core Architectural Components
+
+1. DatabaseManager — Data Layer
+
+Responsible for handling structured data operations through Pandas, including reading and writing CSV files and supporting record-related functionality.
+
+2. SessionHistory — Navigation Layer
+
+Implements a custom stack-based navigation mechanism using the LIFO (Last-In, First-Out) principle to maintain application menu history.
+
+3. PromptValidator — Input Validation
+
+Handles user input validation and supports custom navigation control through exception handling.
+
+4. MenuController — Control Layer
+
+Acts as a base controller for organizing application operations and supporting dynamic method dispatch.
+
+5. TourOperations & CustomerOperations — Functional Modules
+
+Provide dedicated controllers for tour-related and customer-related management operations, with associated data-handling and visualization functionality.
+
+6. AppEngine — Runtime Layer
+
+Coordinates application execution and dispatches control between the different application components.
+
+«[!IMPORTANT]
+The application supports typing "back" at input prompts to initiate custom navigation handling through "NavigationBackException". This works alongside the LIFO session history mechanism to facilitate returning to previous menu states.»
+
+---
+
+📂 Repository Structure
+
+Tourism-and-travel-management-system/
+│
+├── main_source_code.py
+│
+├── TOUR.csv
+├── CUSTOMERS.csv
+├── BOOKING.csv
+├── GUIDE.csv
+│
+├── Future updates.md
+├── README.md
+└── LICENSE
+
+---
+
+⚙️ System Requirements
+
+Hardware & Environment
+
+- Operating System: Windows, macOS, or Linux
+- RAM: 2 GB minimum recommended
+- Storage: Sufficient space for Python, dependencies, and project files
+- Execution Environment: Local Python environment or Google Colab
+
+Software Requirements
+
+- Python: Python 3.8 or higher
+- Required Libraries:
+  - Pandas
+  - NumPy
+  - Matplotlib
+
+Install Dependencies
+
+Install the required Python libraries using pip:
+
+pip install pandas numpy matplotlib
+
+---
+
+▶️ Installation & Execution
+
+Follow these steps to run the application:
+
+1. Clone or Download the Repository
+
+Download the repository to your local device or clone it using Git:
+
+git clone https://github.com/shivangichaudhary-cse/Tourism-and-travel-management-system.git
+
+2. Install Dependencies
+
+Make sure Python and the required libraries are installed:
+
+pip install pandas numpy matplotlib
+
+3. Configure CSV File Paths
+
+Update the CSV file paths in "main_source_code.py" according to the location where the project files are stored on your device.
+
+«[!NOTE]
+The file paths currently used in the source code (such as "/content/") are sample paths from the Google Colab environment. If you are running the application in a different environment, replace these paths with the actual locations of the corresponding CSV files on your device.»
+
+4. Run the Application
+
+Navigate to the project directory and execute:
+
+python main_source_code.py
+
+---
+
+📚 Concepts Demonstrated
+
+This project demonstrates the practical application of several fundamental programming and Computer Science concepts.
+
+Concept| Application in the Project
+Object-Oriented Programming (OOP)| Organizing application components into classes
+Inheritance| Establishing relationships between controller classes
+Exception Handling| Managing invalid inputs and custom navigation flow
+Custom Exceptions| Implementing "NavigationBackException"
+Stack Data Structure| Maintaining navigation history using LIFO
+Dynamic Method Dispatch| Supporting controller-level operation routing
+CSV File Handling| Reading and writing structured datasets
+Pandas DataFrames| Managing and manipulating application records
+NumPy| Supporting numerical operations
+Matplotlib| Generating data visualizations
+Modular Programming| Separating application responsibilities into logical components
+
+---
+
+🔮 Future Scope & Enhancements
+
+The project can be extended through several improvements to enhance its functionality, usability, and data management capabilities.
+
+1. SQL Relational Database Integration
+
+- Replace CSV-based storage with a relational database such as SQLite or PostgreSQL.
+- Introduce structured database relationships and query-based operations.
+- Improve transaction management and data consistency.
+
+2. Graphical User Interface (GUI)
+
+- Transition from terminal-based navigation to a graphical desktop application.
+- Explore frameworks such as PySide6 or PyQt.
+- Develop interactive dashboards for tour and customer management.
+
+3. Automated PDF Invoicing
+
+- Generate booking receipts and customer invoices automatically.
+- Create downloadable financial summaries and transaction reports.
+
+4. Role-Based Access Control (RBAC)
+
+- Introduce separate access levels for administrators and customers.
+- Restrict administrative operations such as adding, modifying, or removing tour records.
+- Improve application-level access management.
+
+«📄 More planned improvements and detailed future development notes are maintained separately.
+
+"View Future Updates" (Future%20updates.md)»
+
+---
+
+🔭 Project Scope & Limitations
+
+Primary Scope
+
+The current project focuses on providing a structured, terminal-based management application for organizing tour information, customer records, booking data, and related travel agency information.
+
+It demonstrates how Python programming, OOP architecture, custom data structures, and data analysis libraries can be integrated into a single application.
+
+Current Limitations
+
+The present implementation focuses on local, file-based management rather than a fully deployed online travel platform.
+
+The following functionalities are outside the current implementation scope:
+
+- Public-facing online booking portals.
+- Integrated payment gateways.
+- Live flight and hotel API synchronization.
+- Cloud-hosted database services.
+- Multi-user authentication and access management.
+
+These areas may be considered for future development.
+
+---
+
+💡 Conclusion
+
+The Tour & Travel Management System demonstrates how fundamental Computer Science concepts can be applied to develop a structured and interactive management application.
+
+By combining Object-Oriented Programming, inheritance, custom exception handling, stack-based navigation, CSV file management, Pandas DataFrames, and Matplotlib visualization, the project explores the integration of software development and data handling within a practical application.
+
+Beyond its core management functionality, the modular architecture provides a foundation for future enhancements, including relational database integration, graphical interfaces, automated reporting, and access management.
+
+The project serves as a practical exploration of Python programming, software architecture, data structures, and analytical tools through a domain-oriented application.
+
+---
+
+📜 License
+
+This project is licensed under the MIT License.
+
+See the "LICENSE" (LICENSE) file for complete license details
